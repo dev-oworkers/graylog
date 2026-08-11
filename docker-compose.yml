@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  extractor:
+    image: projet-extration-auto:${APP_VERSION}
+    
+    build:
+      context: .
+      dockerfile: Dockerfile
+    
+    container_name: pipeline-graylog-v${APP_VERSION}
+    network_mode: "host"
+    restart: always
+    
+    env_file:
+      - .env
+    environment:
+      - TZ=Indian/Antananarivo
+    volumes:
+      - .:/app

@@ -1,0 +1,9 @@
+# main.py doit envoyer ses logs dans cron-main.log
+* * * * * /usr/local/bin/python /app/main.py >> /var/log/cron-main.log 2>&1
+
+# extraction-sheet.py doit envoyer ses logs dans cron-sheet.log
+* * * * * /usr/local/bin/python /app/extraction_sheet.py >> /var/log/cron-sheet.log 2>&1
+
+# extraction-sheet.py doit envoyer ses logs dans cron-sheet.log
+0 0 * * * /usr/local/bin/python /app/pc_graylog.py >> /var/log/pc_graylog.log 2>&1
+

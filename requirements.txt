@@ -1,0 +1,7 @@
+requests==2.31.0
+mysql-connector-python==8.3.0
+python-dotenv==1.0.1
+tzlocal>=5.0
+pandas
+gspread
+oauth2client
